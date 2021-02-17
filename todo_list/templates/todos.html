@@ -1,2 +1,18 @@
-<h1>Are you {{name}}?</h1>
-Do you like {{site}}?
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Todo List</title>
+</head>
+<body>
+
+	<header>
+		<h1>ToDo List</h1>
+		<hr>
+	</header>
+<ul>
+	{% for i in todo %}
+	<li>{{i.title}}: {{i.details}}</li>
+	{% endfor %}
+</ul>
+</body>
+</html>

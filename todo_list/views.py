@@ -7,8 +7,8 @@ def home(request, *args, **kwargs):
 	return render(request, "home.html", {})
 
 def todos_view(request, *args, **kwargs):
+	todo_obj = Todo.objects.all()[:10]
 	context = {
-		'site':'YouTube',
-		'name':'Nem',
+		'todo':todo_obj
 	}	
 	return render(request,"todos.html",context)
