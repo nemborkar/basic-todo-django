@@ -6,7 +6,5 @@ from django.shortcuts import render
 def home(request, *args, **kwargs):
     return render(request, "home.html", {})
 
-
-
 def todos_view(request, *args, **kwargs):
     return render(request, "todos.html", {})
