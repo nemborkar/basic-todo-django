@@ -14,7 +14,16 @@
 	<li>{{i.title}}: {{i.details}}</li>
 	{% endfor %}
 </ul>
-<button type="button">Add</button>
+
+<form action="/task/" method="post">
+	
+	{% csrf_token %}
+	{{todo}}
+	<br>
+	<br>
+	<input type="submit" value="Add Task">
+
+</form>
 
 </body>
 </html>
