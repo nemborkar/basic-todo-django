@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import Todo
 
 # Create your views here.
@@ -12,3 +12,7 @@ def todos_view(request, *args, **kwargs):
 		'todo':todo_obj
 	}	
 	return render(request,"todos.html",context)
+
+def toapp_view(request):
+	response = redirect('/todos/')
+	return response
