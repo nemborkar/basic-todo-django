@@ -1,15 +1,5 @@
-<h1>Todo List</h1>
+{% extends 'base.html' %}
 
-<a href="{% url 'todos' %}">Go to the list</a>
-
- 
-<ul>
-<li>settings.py has the app</li>
-<br>
-<li>urls.py imports views.py</li>
-<li>views.py links to the right html template</li>
-<br>
-<li>views.py is imported from models.py</li>
-<li>mysql database is setup and connected via settings.py</li>
-<li>models.py has a class to access database yet</li>
-</ul>
+{% block content %}
+	Hellowwwww World!
+{% endblock %}
