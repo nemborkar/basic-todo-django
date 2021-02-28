@@ -7,7 +7,7 @@ from .forms import ListForm
 # Create your views here.
 
 def home(request):
-	if request.method == 'POST':
+	if request.method == "POST":
 		form = ListForm(request.POST or None)
 
 		if form.is_valid():
@@ -15,7 +15,10 @@ def home(request):
 			all_items = Todo.objects.all
 			messages.success(request, ('Task has been added to the list'))
 			return render(request, 'home.html', {'all_items': all_items})
-
+		else:
+			all_items = Todo.objects.all
+			messages.success(request, ('This is showing from the inner else'))
+			return render(request, 'home.html', {'all_items': all_items})	
 	else:
 		all_items = Todo.objects.all
 		return render(request, 'home.html', {'all_items': all_items})
