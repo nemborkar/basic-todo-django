@@ -17,7 +17,7 @@ def home(request):
 			return render(request, 'home.html', {'all_items': all_items})
 		else:
 			all_items = Todo.objects.all
-			messages.success(request, ('This is showing from the inner else'))
+			messages.success(request, ('This is showing from the inner else code block'))
 			return render(request, 'home.html', {'all_items': all_items})	
 	else:
 		all_items = Todo.objects.all
