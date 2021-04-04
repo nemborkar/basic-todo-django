@@ -26,3 +26,8 @@ six==1.14.0
 sqlparse==0.4.1
 urllib3==1.25.8
 webencodings==0.5.1
+
+pip~=21.0.1
+toml~=0.10.2
+setuptools~=53.0.0
+djangorestframework~=3.12.4

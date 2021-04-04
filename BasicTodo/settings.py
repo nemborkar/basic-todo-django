@@ -95,10 +95,10 @@ WSGI_APPLICATION = 'BasicTodo.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'OPTIONS':{
+        'OPTIONS': {
             'read_default_file': '/etc/mysql/my.cnf',
         },
-        #'NAME': BASE_DIR / 'db.sqlite3',
+        # 'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 
